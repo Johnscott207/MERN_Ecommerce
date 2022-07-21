@@ -12,7 +12,7 @@ MERN Based Ecommerce Site
 
 <br>
 <br>
-<h3>Features</h3>
+<h3>Using</h3>
 Frontend: ReactjS<br>
 Backend: Express JS<br>
 Database: Mongo DB<br>
