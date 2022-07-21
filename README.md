@@ -20,3 +20,5 @@ Database: Mongo DB<br>
 
 <h2>GALLERY</h2>
 
+<h5>Product List</h5>
+<img src="https://raw.githubusercontent.com/Johnscott207/MERN_Ecommerce/master/Screenshots/Screenshot%20(54).png" style="max-width:600px;" />
