@@ -31,8 +31,8 @@ Database: Mongo DB<br>
 <h4>Admin Panel and ADD Product</h4>
 <img src="https://raw.githubusercontent.com/Johnscott207/MERN_Ecommerce/master/Screenshots/Screenshot%20(52).png" style="max-width:600px;" />
 <br/>
-<h4>Admin Panel and ADD Product</h4>
-<img src="https://raw.githubusercontent.com/Johnscott207/MERN_Ecommerce/master/Screenshots/Screenshot%20(61).png" style="max-width:600px;" />
+<h4>Buy / Payment</h4>
+<img src="https://raw.githubusercontent.com/Johnscott207/MERN_Ecommerce/master/Screenshots/Screenshot%20(57).png" style="max-width:600px;" />
 
 <br/>
 <h4>Others</h4>
