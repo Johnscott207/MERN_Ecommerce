@@ -3,12 +3,12 @@ MERN Based Ecommerce Site
 
 
 <h3>Features</h3>
-1. Products List
-2. Add to Cart / Remove from Cart
-3. Buy Now (Invoice)
-4. Login & Create New Account 
-5. Admin Panel
-6. Add Item Panel
+1. Products List <br>
+2. Add to Cart / Remove from Cart<br>
+3. Buy Now (Invoice)<br><br><br><br>
+4. Login & Create New Account <br><br><br>
+5. Admin Panel<br><br>
+6. Add Item Panel<br>
 
 <h2>GALLERY</h2>
 
