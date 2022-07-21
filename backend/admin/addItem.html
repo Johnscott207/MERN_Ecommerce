@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<style>
+    body {
+        background-color: rgb(36, 38, 54);
+    }
+
+    h5:hover {
+        color: rgb(116, 113, 113);
+    }
+
+    .ht {
+        color: black;
+        margin-left: 10px;
+        padding: 10px;
+        background-color: gray;
+        border-radius: 50%;
+        font-size: 14px;
+
+    }
+
+    .ht:hover {
+        color: white;
+        margin-left: 10px;
+        padding: 10px;
+        background-color: black;
+        border-radius: 50%;
+        font-size: 18px;
+    }
+
+    .sidebar {
+        color: white;
+        height: 100vh;
+        box-shadow: 2px 0px 3px white;
+        background-color: #383a48;
+        position: sticky;
+        top: 0;
+    }
+
+    .sidebar a {
+        text-decoration: none;
+        text-underline: none;
+        color: white;
+    }
+
+    .sidebar a:hover {
+        color: rgb(162, 162, 162);
+    }
+
+    .sidebar h5 {
+        font-size: 14px;
+    }
+
+    .content {
+        color: white;
+    }
+
+    .content input {
+        margin-top: 5px;
+        border: 1px solid gray;
+        border-radius: 10px;
+    }
+
+    .content textarea {
+        margin-top: 5px;
+        border: 1px solid gray;
+        border-radius: 10px;
+        width: 300px;
+        height: 200px;
+    }
+
+    .content button {
+        float: right;
+    }
+
+    .content .list .list-item {
+        max-width: 298px;
+        height: 40px;
+        border: 1px solid gray;
+        background: #ffffff;
+        border-radius: 40px;
+        padding: 0px;
+    }
+
+    .content .list .list-item input {
+        width: calc(100% - 24px);
+        background: transparent;
+        border: 0px;
+        outline: none;
+    }
+
+    .content .list .list-item button {
+        color: gray;
+        font-weight: 400;
+        outline: none;
+        background: transparent;
+        border: 0pc;
+        margin-top: 5px;
+    }
+
+    .content .addItem {
+        float: left;
+        width: 298px;
+        border-radius: 8px;
+        margin-top: 9px;
+    }
+</style>
+
+<body>
+    <div class="container-fluid">
+        <section>
+            <div class="admin_pannel">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-8 col-sm-12 sidebar">
+                            <h5 class="bg-dark text-white text-center p-2 rounded-pill mt-3"> Admin <b>One</b></h5> <br>
+                            <p>GENERAL</p>
+                            <h5><i class="fa-solid fa-desktop ht "></i><a href="/api/admin"> Dashboard</a> </h5>
+                            <br>
+                            <p>EXAMPLE</p>
+                            <h5><i class="fa-solid fa-table-cells ht active"></i><a href="/api/admin/add"> Add Item</a>
+                            </h5>
+                            <h5><i class="fa-solid fa-pen-to-square mt-3 ht"></i> Form</h5>
+                            <h5><i class="fa-solid fa-user mt-3 ht"></i> Profile</h5>
+                            <h5><i class="fa-solid fa-lock mt-3 ht"></i> <a href="/api/logout">Logout</a> </h5><br>
+                            <p>About</p>
+                            <h5><i class="fa-solid fa-question  ht"></i> About</h5>
+                        </div>
+
+                        <div class="col-lg-10 col-md-8 col-sm-12 p-5 pt-3 content">
+
+
+                            <form enctype="multipart/form-data" action="/api/upload/item" method="post">
+                                <h1>Add Product Item <button type="submit" class="btn btn-success">Upload</button></h1>
+                                <br>
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="name">Product Name</label>
+                                        <br>
+                                        <input type="text" name="name" required />
+                                        <br>
+                                        <br>
+                                        <label for="price">Product Price</label>
+                                        <br>
+                                        <input type="number" name="price" required />
+                                        <br>
+                                        <br>
+                                        <label for="brand">Product Brand</label>
+                                        <br>
+                                        <input type="text" name="brand" required />
+                                        <br>
+                                        <br>
+                                        <label for="screenshot">Product Screenshots</label>
+                                        <br>
+                                        <input type="file" name="screenshot" accept="image/*" multiple required />
+                                        <br>
+                                        <br>
+                                        <label for="description">Product Details List</label>
+                                        <br>
+                                        <div class="list">
+                                            <div class="list-item">
+                                                <input type="text" name="list" /><button onclick="selfDestroy(this)"
+                                                    type="button">x</button>
+                                            </div>
+                                        </div>
+                                        <button class="addItem" type="button" onclick="addIt()">+Add</button>
+
+                                        <br>
+                                        <br>
+                                        <label for="description">Product Details</label>
+                                        <br>
+                                        <textarea min=210 name="description" required></textarea>
+                                        <br>
+                                        <br>
+                                    </div>
+                                    <div class="col">
+                                        <label for="type">Product Type</label>
+                                        <br>
+                                        <select name="type" id="" required>
+                                            <option value="">None</option>
+                                            <option value="Shirt">Shirt</option>
+                                            <option value="Tshirt">T-shirt</option>
+                                            <option value="pants">Pants</option>
+                                        </select>
+                                        <br>
+                                        <br>
+                                        <label for="rating">Product Rating</label>
+                                        <br>
+                                        <input type="range" min="1" max="5" name="rating" required />
+                                        <br>
+                                        <br>
+                                        <label for="img_src">Product Thumbnail</label>
+                                        <br>
+                                        <input type="file" name="img_src" accept="image/*" required />
+                                        <br>
+                                        <br>
+                                        <label for="quantity">Product Quantity</label>
+                                        <br>
+                                        <input type="number" name="quantity" required />
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+
+
+
+
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- <a href="/api/logout">Logout me </a> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script>
+
+        function selfDestroy(e) {
+            e.parentElement.parentElement.removeChild(e.parentElement);
+        }
+
+        function addIt() {
+            var div = document.createElement("div");
+            div.setAttribute("class", "list-item");
+            div.innerHTML = '<input type="text" name="list" /><button onclick="selfDestroy(this)" type="button">x</button>';
+            document.querySelector(".list").appendChild(div);
+        }
+    </script>
+</body>
+
+</html>
