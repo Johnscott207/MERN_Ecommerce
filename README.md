@@ -9,9 +9,11 @@ MERN Based Ecommerce Site
 4. Login & Create New Account <br>
 5. Admin Panel<br>
 6. Add Products Panel<br>
-#Using
-Frontend: ReactjS
-Backend: Express JS
-Database: Mongo DB
+# Using
+Frontend: ReactjS<br>
+Backend: Express JS<br>
+Database: Mongo DB<br>
+
+
 <h2>GALLERY</h2>
 
